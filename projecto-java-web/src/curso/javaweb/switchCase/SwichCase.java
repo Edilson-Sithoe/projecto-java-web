@@ -11,19 +11,19 @@ public class SwichCase {
 		int media = 0;
 
 		media = (nota1 + nota2 + nota3 + nota4) / 4;
-		int dia = 2;
-		switch (dia) {
-			case 1:
-				System.out.println("Domingo");
+		int media = 2;
+		switch (media) {
+			case 10:
+				System.out.println("Vai ao exame com "+ media);
 			break;
-			case 2:
-				System.out.println("Segunda-feira");
+			case 12:
+				System.out.println("Vai ao exame com "+ media);
 			break;
-			case 3:
-				System.out.println("Terça-feria");
+			case 14:
+				System.out.println("Dispensa com media " +media);
 			break;
 			default: 
-				System.out.println("Outro valor " + dia);
+				System.out.println("Outro valor " + media);
 			break;
 		}
 	}

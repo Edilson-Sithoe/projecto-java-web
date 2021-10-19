@@ -7,6 +7,9 @@ public class Pessoa {
 	private String apelido;
 	private int idade;
 	private Date dataNascimento;
+	private String morada;
+	private int nuit;
+	private String bi;
 	
 
 	public String getNome() {
@@ -39,6 +42,30 @@ public class Pessoa {
 
 	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
+	}
+
+	public String getMorada() {
+		return morada;
+	}
+
+	public void setMorada(String morada) {
+		this.morada = morada;
+	}
+
+	public int getNuit() {
+		return nuit;
+	}
+
+	public void setNuit(int nuit) {
+		this.nuit = nuit;
+	}
+
+	public String getBi() {
+		return bi;
+	}
+
+	public void setBi(String bi) {
+		this.bi = bi;
 	}
 
 	

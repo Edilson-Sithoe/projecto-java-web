@@ -6,7 +6,11 @@ public class Pessoa {
 	private String nome;
 	private String apelido;
 	private int idade;
+<<<<<<< master
 	
+=======
+	private Date data_nascimento;
+>>>>>>> bf07b85 Add campo data de nascimento
 
 	public String getNome() {
 		return nome;
@@ -32,6 +36,16 @@ public class Pessoa {
 		this.idade = idade;
 	}
 
+<<<<<<< master
 	
+=======
+	public Date getData_nascimento() {
+		return data_nascimento;
+	}
+
+	public void setData_nascimento(Date data_nascimento) {
+		this.data_nascimento = data_nascimento;
+	}
+>>>>>>> bf07b85 Add campo data de nascimento
 
 }

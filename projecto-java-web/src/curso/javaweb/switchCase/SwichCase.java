@@ -18,5 +18,29 @@ public class SwichCase {
 		System.out.println(resp);
 		
 		JOptionPane.showMessageDialog(null, "Divisao para pessoas deu: " +divisao+ " carros e sobrou " +resto+" carros");
+
+		int nota1 = 10;
+		int nota2 = 12;
+		int nota3 = 14;
+		int nota4 = 16;
+		int media = 0;
+
+		media = (nota1 + nota2 + nota3 + nota4) / 4;
+		int media1 = 2;
+		switch (media1) {
+			case 10:
+				System.out.println("Vai ao exame com "+ media1);
+			break;
+			case 12:
+				System.out.println("Vai ao exame com "+ media1);
+			break;
+			case 14:
+				System.out.println("Dispensa com media " +media1);
+			break;
+			default: 
+				System.out.println("Outro valor " + media1);
+			break;
+		}
+//github.com/Edilson-Sithoe/projecto-java-web.git
 	}
 }

@@ -1,29 +1,22 @@
 package curso.javaweb.switchCase;
 
+import javax.swing.JOptionPane;
 
 public class SwichCase {
 	public static void main(String[] args) {
-		int nota1 = 10;
-		int nota2 = 12;
-		int nota3 = 14;
-		int nota4 = 16;
-		int media = 0;
-
-		media = (nota1 + nota2 + nota3 + nota4) / 4;
-		int dia = 2;
-		switch (dia) {
-			case 1:
-				System.out.println("Domingo");
-			break;
-			case 2:
-				System.out.println("Segunda-feira");
-			break;
-			case 3:
-				System.out.println("Terça-feria");
-			break;
-			default: 
-				System.out.println("Outro valor " + dia);
-			break;
-		}
+		
+		String pessoas = JOptionPane.showInputDialog("Quantas pessoas existem? ");
+		String carros = JOptionPane.showInputDialog("Quantos carros existem? ");
+		
+		Double pessoasNumero = Double.parseDouble(pessoas);
+		Double carrosNumero = Double.parseDouble(carros);
+		
+		int divisao = (int)(pessoasNumero/carrosNumero);
+		Double resto = carrosNumero % pessoasNumero;
+		
+		int resp = JOptionPane.showConfirmDialog(null, "Deseja ver o resulado da divisão e o seu resto?");
+		System.out.println(resp);
+		
+		JOptionPane.showMessageDialog(null, "Divisao para pessoas deu: " +divisao+ " carros e sobrou " +resto+" carros");
 	}
 }

@@ -1,6 +1,5 @@
 package curso.javaweb.switchCase;
 
-import javax.swing.DefaultBoundedRangeModel;
 
 public class SwichCase {
 	public static void main(String[] args) {

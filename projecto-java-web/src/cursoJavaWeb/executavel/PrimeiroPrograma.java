@@ -15,6 +15,10 @@ public class PrimeiroPrograma {
 		aluno1.setdataNascimento("05-10-1995");
 		aluno1.setMorada("Zimpeto");
 		aluno1.setDataMatricula("22-10-2021");
+		aluno1.setNota1(15);
+		aluno1.setNota2(18);
+		aluno1.setNota3(14);
+		aluno1.setNota4(16);
 		
 		System.out.println("Nome: "+aluno1.getNome()+";");
 		System.out.println("Apelido: "+aluno1.getApelido()+";");
@@ -22,6 +26,9 @@ public class PrimeiroPrograma {
 		System.out.println("Data de Nasciemnto: "+aluno1.getdataNascimento()+";");
 		System.out.println("Morada: "+aluno1.getMorada()+";");
 		System.out.println("Data da Matricula: "+aluno1.getDataMatricula()+".");
+		System.out.println("Media Fianl: "+aluno1.getMediaNota());
+		//System.out.println("Situacao Final: "+aluno1.getAlunoAprovado());
+		System.out.println("Situação: "+aluno1.getSituacaoAluno());
 		
 		Aluno aluno2 = new Aluno();
 		aluno2.setNome("Yannick");
@@ -31,13 +38,13 @@ public class PrimeiroPrograma {
 		aluno2.setMorada("Zimpeto");
 		aluno2.setDataMatricula("22-10-2021");
 		
-		System.out.println("********************** Aluno 2 *****************************");
+		/** System.out.println("********************** Aluno 2 *****************************");
 		System.out.println("Nome: "+aluno2.getNome()+";");
 		System.out.println("Apelido: "+aluno2.getApelido()+";");
 		System.out.println("Idade: "+aluno2.getIdade()+";");
 		System.out.println("Data de Nasciemnto: "+aluno2.getdataNascimento()+";");
 		System.out.println("Morada: "+aluno2.getMorada()+";");
-		System.out.println("Data da Matricula: "+aluno2.getDataMatricula()+".");
+		System.out.println("Data da Matricula: "+aluno2.getDataMatricula()+".");*/
 		
 		Aluno aluno3 = new Aluno();
 	}

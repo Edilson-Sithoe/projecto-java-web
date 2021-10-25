@@ -38,13 +38,13 @@ public class PrimeiroPrograma {
 		aluno2.setMorada("Zimpeto");
 		aluno2.setDataMatricula("22-10-2021");
 		
-		/** System.out.println("********************** Aluno 2 *****************************");
+		System.out.println("********************** Aluno 2 *****************************");
 		System.out.println("Nome: "+aluno2.getNome()+";");
 		System.out.println("Apelido: "+aluno2.getApelido()+";");
 		System.out.println("Idade: "+aluno2.getIdade()+";");
 		System.out.println("Data de Nasciemnto: "+aluno2.getdataNascimento()+";");
 		System.out.println("Morada: "+aluno2.getMorada()+";");
-		System.out.println("Data da Matricula: "+aluno2.getDataMatricula()+".");*/
+		System.out.println("Data da Matricula: "+aluno2.getDataMatricula()+".");
 		
 		Aluno aluno3 = new Aluno();
 	}

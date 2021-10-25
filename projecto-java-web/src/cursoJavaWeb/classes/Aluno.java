@@ -1,17 +1,13 @@
 package cursoJavaWeb.classes;
 
+import java.util.Objects;
+
 public class Aluno {
 	
 	private String nome;
 	private String apelido;
-	private int idade;
-	private String dataNascimento;
-	private String morada;
-	private String dataMatricula;
-	private double nota1;
-	private double nota2;
-	private double nota3;
-	private double nota4;
+	
+	private Disciplina disciplina = new Disciplina();
 	
 	public Aluno() {
 		
@@ -24,7 +20,8 @@ public class Aluno {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
+	
+		
 	public String getApelido() {
 		return apelido;
 	}
@@ -33,82 +30,18 @@ public class Aluno {
 		this.apelido = apelido;
 	}
 
-	public int getIdade() {
-		return idade;
+	public Disciplina getDisciplina() {
+		return disciplina;
 	}
 
-	public void setIdade(int idade) {
-		this.idade = idade;
-	}
-
-	public String getdataNascimento() {
-		return dataNascimento;
-	}
-
-	public void setdataNascimento(String dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
-
-	public String getMorada() {
-		return morada;
-	}
-
-	public void setMorada(String morada) {
-		this.morada = morada;
-	}
-
-	public String getDataMatricula() {
-		return dataMatricula;
-	}
-
-	public void setDataMatricula(String dataMatricula) {
-		this.dataMatricula = dataMatricula;
-	}
-
-	public String getDataNascimento() {
-		return dataNascimento;
-	}
-
-	public void setDataNascimento(String dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
-
-	public double getNota1() {
-		return nota1;
-	}
-
-	public void setNota1(double nota1) {
-		this.nota1 = nota1;
-	}
-
-	public double getNota2() {
-		return nota2;
-	}
-
-	public void setNota2(double nota2) {
-		this.nota2 = nota2;
-	}
-
-	public double getNota3() {
-		return nota3;
-	}
-
-	public void setNota3(double nota3) {
-		this.nota3 = nota3;
-	}
-
-	public double getNota4() {
-		return nota4;
-	}
-
-	public void setNota4(double nota4) {
-		this.nota4 = nota4;
+	public void setDisciplina(Disciplina disciplina) {
+		this.disciplina = disciplina;
 	}
 	
 	public double getMediaNota() {
-		return (nota1 + nota2 + nota3 + nota4)/4;
+		return (disciplina.getNota1() + disciplina.getNota2())/2;
 	}
-	
+
 	public boolean getAlunoAprovado() {
 		double media = this.getMediaNota();
 		
@@ -129,4 +62,30 @@ public class Aluno {
 			return "Dispensado";
 		}
 	}
+
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(nome);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		return Objects.equals(nome, other.nome);
+	}
+
+	@Override
+	public String toString() {
+		return "Aluno [nome:" + nome + ", apelido:" + apelido + ", disciplina:" + disciplina + "]";
+	}
+
+	
 }

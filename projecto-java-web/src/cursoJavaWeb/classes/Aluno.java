@@ -1,5 +1,7 @@
 package cursoJavaWeb.classes;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Aluno {
@@ -7,8 +9,24 @@ public class Aluno {
 	private String nome;
 	private String apelido;
 	
-	private Disciplina disciplina = new Disciplina();
-	private Curso curso = new Curso();
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
+	private List<Curso> cursos = new ArrayList<Curso>();
+	
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
+	}
+	
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
+	}
+	
+	public void setCursos(List<Curso> cursos) {
+		this.cursos = cursos;
+	}
+	
+	public List<Curso> getCursos() {
+		return cursos;
+	}
 	
 	public Aluno() {
 		
@@ -29,28 +47,17 @@ public class Aluno {
 
 	public void setApelido(String apelido) {
 		this.apelido = apelido;
-	}
-
-	public Disciplina getDisciplina() {
-		return disciplina;
-	}
-
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
-	}
+	}	
+	
 	
 	public double getMediaNota() {
-		return (disciplina.getNota1() + disciplina.getNota2())/2;
-	}
-	
-	
-
-	public Curso getCurso() {
-		return curso;
-	}
-
-	public void setCurso(Curso curso) {
-		this.curso = curso;
+		
+		double somaNotas = 0.0;
+		
+		for(Disciplina disciplina: disciplinas) {
+			somaNotas += disciplina.getNota();
+		}
+		return somaNotas / disciplinas.size();
 	}
 
 	public boolean getAlunoAprovado() {
@@ -96,7 +103,7 @@ public class Aluno {
 
 	@Override
 	public String toString() {
-		return "Aluno [nome=" + nome + ", apelido=" + apelido + ", disciplina=" + disciplina + "]";
+		return "Aluno [nome=" + nome + ", apelido=" + apelido + "]";
 	}
 
 

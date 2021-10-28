@@ -4,6 +4,8 @@ import java.util.Objects;
 
 public class Curso {
 	
+	/* Trabalhando com listas */
+	
 	private String nomeCurso;
 	private String regimeCurso;
 	private String nivelCurso;

@@ -3,22 +3,17 @@ package cursoJavaWeb.classes;
 import java.util.Objects;
 
 public class Disciplina {
+	/* Trabalhando com listas 
+	 * Esta classe servirá para todos os objcetos e Instâncias de notas e maaterias*/
 	
-	private double nota1;
-	private double nota2;
+	private double nota;
 	private String nomeDisciplina;
 	
-	public double getNota1() {
-		return nota1;
+	public double getNota() {
+		return nota;
 	}
-	public void setNota1(double nota1) {
-		this.nota1 = nota1;
-	}
-	public double getNota2() {
-		return nota2;
-	}
-	public void setNota2(double nota2) {
-		this.nota2 = nota2;
+	public void setNota(double nota) {
+		this.nota = nota;
 	}
 	public String getNomeDisciplina() {
 		return nomeDisciplina;
@@ -26,10 +21,12 @@ public class Disciplina {
 	public void setNomeDisciplina(String nomeDisciplina) {
 		this.nomeDisciplina = nomeDisciplina;
 	}
+	
 	@Override
 	public int hashCode() {
-		return Objects.hash(nomeDisciplina, nota1, nota2);
+		return Objects.hash(nomeDisciplina, nota);
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -40,15 +37,13 @@ public class Disciplina {
 			return false;
 		Disciplina other = (Disciplina) obj;
 		return Objects.equals(nomeDisciplina, other.nomeDisciplina)
-				&& Double.doubleToLongBits(nota1) == Double.doubleToLongBits(other.nota1)
-				&& Double.doubleToLongBits(nota2) == Double.doubleToLongBits(other.nota2);
-	}
-	@Override
-	public String toString() {
-		return "Disciplina [nota1=" + nota1 + ", nota2=" + nota2 + ", nomeDisciplina=" + nomeDisciplina + "]";
+				&& Double.doubleToLongBits(nota) == Double.doubleToLongBits(other.nota);
 	}
 	
-
+	@Override
+	public String toString() {
+		return "Disciplina [nota=" + nota + ", nomeDisciplina=" + nomeDisciplina + "]";
+	}
 	
 	
 }

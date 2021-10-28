@@ -5,47 +5,44 @@ import javax.swing.JOptionPane;
 import cursoJavaWeb.classes.Aluno;
 
 public class PrimeiroPrograma {
-	/*Main eh um metodo de auto execucao do java*/
+	/* Main eh um metodo de auto execucao do java */
 	public static void main(String[] args) {
 		
-		Aluno aluno1 = new Aluno();
-		aluno1.setNome("Edilson");
-		aluno1.setApelido("Sithoe");
-		aluno1.setIdade(26);
-		aluno1.setdataNascimento("05-10-1995");
-		aluno1.setMorada("Zimpeto");
-		aluno1.setDataMatricula("22-10-2021");
-		aluno1.setNota1(15);
-		aluno1.setNota2(18);
-		aluno1.setNota3(14);
-		aluno1.setNota4(16);
+		String nome = JOptionPane.showInputDialog("Nome: ");
+		String apelido = JOptionPane.showInputDialog("Apelido");
+		
+		String curso = JOptionPane.showInputDialog("Curso: ");
+		String regime = JOptionPane.showInputDialog("Regime");
+		String nivel = JOptionPane.showInputDialog("Nivel[1 - 4]");
+		String semestre = JOptionPane.showInputDialog("Semestre");
+		
+		String disciplina = JOptionPane.showInputDialog("Disciplina: ");
+		
+		String nota1 = JOptionPane.showInputDialog("Nota 1: ");
+		String nota2 = JOptionPane.showInputDialog("Nota 2: ");
+		
+		Aluno aluno1 = new Aluno();		
+		
+		aluno1.setNome(nome);
+		aluno1.setApelido(apelido);
+		aluno1.getCurso().setNomeCurso(curso);
+		aluno1.getCurso().setRegimeCurso(regime);
+		aluno1.getCurso().setNivelCurso(nivel);
+		aluno1.getCurso().setSemestreCurso(semestre);
+		aluno1.getDisciplina().setNomeDisciplina(disciplina);
+		aluno1.getDisciplina().setNota1(Double.parseDouble(nota1));
+		aluno1.getDisciplina().setNota2(Double.parseDouble(nota2));	
 		
 		System.out.println("Nome: "+aluno1.getNome()+";");
 		System.out.println("Apelido: "+aluno1.getApelido()+";");
-		System.out.println("Idade: "+aluno1.getIdade()+";");
-		System.out.println("Data de Nasciemnto: "+aluno1.getdataNascimento()+";");
-		System.out.println("Morada: "+aluno1.getMorada()+";");
-		System.out.println("Data da Matricula: "+aluno1.getDataMatricula()+".");
+		System.out.println("Curso: "+aluno1.getCurso().getNomeCurso());
+		System.out.println("Regime: "+aluno1.getCurso().getRegimeCurso());
+		System.out.println("Nível: "+aluno1.getCurso().getNivelCurso());
+		System.out.println("Semestre: "+aluno1.getCurso().getSemestreCurso());
+		System.out.println("Disciplina: "+aluno1.getDisciplina().getNomeDisciplina());
 		System.out.println("Media Fianl: "+aluno1.getMediaNota());
-		//System.out.println("Situacao Final: "+aluno1.getAlunoAprovado());
 		System.out.println("Situação: "+aluno1.getSituacaoAluno());
+
 		
-		Aluno aluno2 = new Aluno();
-		aluno2.setNome("Yannick");
-		aluno2.setApelido("Mahumane");
-		aluno2.setIdade(26);
-		aluno2.setdataNascimento("05-10-1995");
-		aluno2.setMorada("Zimpeto");
-		aluno2.setDataMatricula("22-10-2021");
-		
-		System.out.println("********************** Aluno 2 *****************************");
-		System.out.println("Nome: "+aluno2.getNome()+";");
-		System.out.println("Apelido: "+aluno2.getApelido()+";");
-		System.out.println("Idade: "+aluno2.getIdade()+";");
-		System.out.println("Data de Nasciemnto: "+aluno2.getdataNascimento()+";");
-		System.out.println("Morada: "+aluno2.getMorada()+";");
-		System.out.println("Data da Matricula: "+aluno2.getDataMatricula()+".");
-		
-		Aluno aluno3 = new Aluno();
 	}
 }

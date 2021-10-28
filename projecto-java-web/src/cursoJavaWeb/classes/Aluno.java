@@ -8,6 +8,7 @@ public class Aluno {
 	private String apelido;
 	
 	private Disciplina disciplina = new Disciplina();
+	private Curso curso = new Curso();
 	
 	public Aluno() {
 		
@@ -41,6 +42,16 @@ public class Aluno {
 	public double getMediaNota() {
 		return (disciplina.getNota1() + disciplina.getNota2())/2;
 	}
+	
+	
+
+	public Curso getCurso() {
+		return curso;
+	}
+
+	public void setCurso(Curso curso) {
+		this.curso = curso;
+	}
 
 	public boolean getAlunoAprovado() {
 		double media = this.getMediaNota();
@@ -62,7 +73,8 @@ public class Aluno {
 			return "Dispensado";
 		}
 	}
-
+	
+	
 
 
 	@Override
@@ -84,8 +96,10 @@ public class Aluno {
 
 	@Override
 	public String toString() {
-		return "Aluno [nome:" + nome + ", apelido:" + apelido + ", disciplina:" + disciplina + "]";
+		return "Aluno [nome=" + nome + ", apelido=" + apelido + ", disciplina=" + disciplina + "]";
 	}
+
+
 
 	
 }

@@ -23,7 +23,7 @@ public class SwichCase {
 		int nota2 = 12;
 		int nota3 = 14;
 		int nota4 = 16;
-		int media = 0;
+		int media = 20;
 
 		media = (nota1 + nota2 + nota3 + nota4) / 4;
 		int media1 = 2;

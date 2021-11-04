@@ -5,31 +5,31 @@ import java.util.List;
 import java.util.Objects;
 
 public class Aluno {
-	
+
 	private String nome;
 	private String apelido;
-	
+
 	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 	private List<Curso> cursos = new ArrayList<Curso>();
-	
+
 	public void setDisciplinas(List<Disciplina> disciplinas) {
 		this.disciplinas = disciplinas;
 	}
-	
+
 	public List<Disciplina> getDisciplinas() {
 		return disciplinas;
 	}
-	
+
 	public void setCursos(List<Curso> cursos) {
 		this.cursos = cursos;
 	}
-	
+
 	public List<Curso> getCursos() {
 		return cursos;
 	}
-	
+
 	public Aluno() {
-		
+
 	}
 
 	public String getNome() {
@@ -39,22 +39,20 @@ public class Aluno {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-		
+
 	public String getApelido() {
 		return apelido;
 	}
 
 	public void setApelido(String apelido) {
 		this.apelido = apelido;
-	}	
-	
-	
+	}
+
 	public double getMediaNota() {
-		
+
 		double somaNotas = 0.0;
-		
-		for(Disciplina disciplina: disciplinas) {
+
+		for (Disciplina disciplina : disciplinas) {
 			somaNotas += disciplina.getNota();
 		}
 		return somaNotas / disciplinas.size();
@@ -62,27 +60,39 @@ public class Aluno {
 
 	public boolean getAlunoAprovado() {
 		double media = this.getMediaNota();
-		
+
 		if (media > 10) {
 			return true;
 		} else {
 			return false;
 		}
 	}
-	
+
+	public String getAlunoAprovado2() {
+		double media = this.getMediaNota();
+		if (media > 9 && media < 14) {
+			if (media > 9) {
+				return "Aprovado";
+			} else {
+				return "Recorrencia";
+			}
+		} else if (media > 13) {
+			return "Aluno dispensado";
+		} else {
+			return "Excluido";
+		}
+	}
+
 	public String getSituacaoAluno() {
 		double media = this.getMediaNota();
 		if (media < 10) {
 			return "Aluno Excluido";
-		} else if((media > 9) && (media < 14)){
+		} else if ((media > 9) && (media < 14)) {
 			return "Admitido";
 		} else {
 			return "Dispensado";
 		}
 	}
-	
-	
-
 
 	@Override
 	public int hashCode() {
@@ -106,7 +116,4 @@ public class Aluno {
 		return "Aluno [nome=" + nome + ", apelido=" + apelido + "]";
 	}
 
-
-
-	
 }

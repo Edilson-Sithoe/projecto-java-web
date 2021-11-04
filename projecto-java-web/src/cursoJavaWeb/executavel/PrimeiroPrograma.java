@@ -50,7 +50,7 @@ public class PrimeiroPrograma {
 			System.out.println("Apelido: " + aluno.getApelido() + ";");
 			System.out.println("Media Final: " + aluno.getMediaNota());
 			System.out.println("Situação: " + aluno.getAlunoAprovado2());
-			System.out.println("------------------------------------------");
+			
 		}
 	}
 }

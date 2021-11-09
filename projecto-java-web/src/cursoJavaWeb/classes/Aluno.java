@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import curso.javaweb.constantes.StatusAluno;
+
 public class Aluno {
 
 	private String nome;
@@ -86,11 +88,11 @@ public class Aluno {
 	public String getSituacaoAluno() {
 		double media = this.getMediaNota();
 		if (media < 10) {
-			return "Aluno Excluido";
+			return StatusAluno.EXCLUIDO;
 		} else if ((media > 9) && (media < 14)) {
-			return "Admitido";
+			return StatusAluno.ADMITIDO;
 		} else {
-			return "Dispensado";
+			return StatusAluno.DESPENSADO;
 		}
 	}
 
